@@ -1,37 +1,74 @@
-<html>
-
-<style>
-a:link {
-    color: green;
-}
-a:visited {
-    color: hotpink;
-}
-a:hover {
-    color: red;
-}
-a:active {
-    color: blue;
-}
-
-</style>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>RAILWAY RESERVATION SYSTEM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Reservation System</title>
+  <style>
+    /* Style for anchor tags */
+    a:link {
+      color: green;
+      text-decoration: none;
+    }
+    a:visited {
+      color: hotpink;
+      text-decoration: none;
+    }
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+    a:active {
+      color: blue;
+    }
+
+    /* Center alignment and layout */
+    body {
+      background-image: url('train.gif');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 10%;
+    }
+
+    h1 {
+      color: red;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    h2 {
+      font-style: italic;
+      margin-top: 20px;
+      font-size: 1.5em;
+      line-height: 2.5;
+    }
+
+    a {
+      font-weight: bold;
+    }
+
+    a:hover {
+      transition: color 0.3s ease;
+    }
+  </style>
 </head>
-<body style=" background-image: url(train.gif);
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;" >
-<div align="CENTER" >
-<h1 style="color: red;">RAILWAY RESERVATION SYSTEM</h1>
-<div>
-<h2 style="font-style: italic;"><br><a href="http://localhost/railway/new_user_form.html">New User </a><br>
-<br><a href="http://localhost/railway/enquiry.php" >Enquiry and Ticket Booking </a><br>
-<br><a href="http://localhost/railway/user_login.htm">Ticket History OR Cancellation </a><br>
-<br><a href="http://localhost/railway/admin_login.php">Admin Login </a><br></h2>
-</div>
-</div>
-</body> 
+<body>
+  <div class="container">
+    <h1>RAILWAY RESERVATION SYSTEM</h1>
+    <h2>
+      <a href="http://localhost/railway/new_user_form.html">New User</a><br>
+      <a href="http://localhost/railway/enquiry.php">Enquiry and Ticket Booking</a><br>
+      <a href="http://localhost/railway/user_login.htm">Ticket History OR Cancellation</a><br>
+      <a href="http://localhost/railway/admin_login.php">Admin Login</a>
+    </h2>
+  </div>
+</body>
 </html>

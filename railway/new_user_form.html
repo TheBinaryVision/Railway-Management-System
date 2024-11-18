@@ -1,23 +1,96 @@
-<html>
-<body style=" background-image: url(userlogin.png);
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;" >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login</title>
+  <style>
+    body {
+      background-image: url('userlogin.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-<form action="new_user_form.php" method="post">
-<div align="center">
-Kindly enter your credentials!!!<br><br>
-Password: <input type="password" name="password" required><br><br>
-E-mail ID: <input type="text" name="emailid" required><br><br>
-Mobile No.: <input type="text" name="mobileno" required><br><br>
-dob: <input type="date" name="dob" required><br><br>
+    .form-container {
+      text-align: center;
+      margin-top: 10%;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      display: inline-block;
+    }
 
-<input type="submit" value="Save"><br><br>
+    h1 {
+      color: #444;
+    }
 
-<a href="index.htm">Home Page</a>
-</div>
-</form>
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
 
+    input[type="text"], input[type="password"], input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div align="center">
+    <div class="form-container">
+      <h1>Kindly Enter Your Credentials</h1>
+      <form action="new_user_form.php" method="post">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="emailid">E-mail ID:</label>
+        <input type="text" id="emailid" name="emailid" required>
+
+        <label for="mobileno">Mobile No.:</label>
+        <input type="text" id="mobileno" name="mobileno" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <input type="submit" value="Save">
+      </form>
+      <br>
+      <a href="index.htm">Home Page</a>
+    </div>
+  </div>
 </body>
 </html>

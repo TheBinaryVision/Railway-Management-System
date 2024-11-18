@@ -1,7 +1,14 @@
-<?indexhindex
+<?php
+// Start the session
 session_start();
-$_SESSION=array();
+
+// Clear all session variables
+$_SESSION = array();
+
+// Destroy the session
 session_destroy();
-header('location:index.htm');
+
+// Redirect to the home page
+header('Location: index.htm');
 exit();
 ?>

@@ -1,20 +1,78 @@
-<html>
-<body style=" background-image: url(adminlogin.jpeg);
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;" >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            background-image: url('adminlogin.jpeg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+        }
+        .login-container {
+            text-align: center;
+            margin-top: 15%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .home-link {
+            color: #00f;
+            text-decoration: none;
+        }
+        .home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form action="admin_login.php" method="post">
+            <label for="uid">User ID:</label>
+            <input type="text" id="uid" name="uid" required>
 
-<form action="admin_login.php" method="post">
-<div align="center">
-	Enter the admin details:<br><br>
-User ID: <input type="text" name="uid" required><br>
-Password: <input type="password" name="password" required><br>
-<input type="submit">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-<br><br><a href="index.htm">Home Page</a>
-
-</div>
-</form>
+            <input type="submit" value="Login">
+        </form>
+        <br>
+        <a href="index.htm" class="home-link" title="Return to the home page">Home Page</a>
+    </div>
 </body>
 </html>
